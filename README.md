@@ -1,0 +1,2 @@
+# Default-value
+xample()  Func Example()     Local $aArray[100]     _ArrayDisplay($aArray)     PurgeVar($aArray)     _ArrayDisplay($aArray) EndFunc   ;==>Example  Func PurgeVar(ByRef $vVar)     Switch VarGetType($vVar)         Case "Array"             Local $aEmpty[0]             $vVar = $aEmpty ; Default value of an array.         Case "Binary"             $vVar = Binary(0) ; Default value of binary.         Case "Bool"
